@@ -24,7 +24,7 @@ PostgreSQL (Ensure you have a PostgreSQL instance running and accessible)
 ### 1.  Clone the repository:
 
 ```
-git clone https://github.com/your-username/nest-typeorm.git
+git clone https://github.com/ysamaila/nest-typeorm.git
 Navigate to the project directory:
 ```
 
@@ -36,3 +36,49 @@ cd nest-typeorm
 ``` 
 npm install 
 ```
+
+### 3. Set up the .env file with your database configuration:
+```
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+DATABASE_USER=your_username
+DATABASE_PASSWORD=your_password
+DATABASE_NAME=your_database
+```
+
+### 4. Run the application
+```
+npm run start
+```
+The API will be available at http://localhost:3000
+
+### 5. Access the Swagger documentation:
+Visit http://localhost:3000/api to explore and test the API endpoints through the automatically generated Swagger interface.
+
+## API Endpoints
+
+| HTTP Method | Route         | Description                        |
+|-------------|---------------|------------------------------------|
+| POST        | /todos         | Create a new todo                  |
+| GET         | /todos         | Get all todos                      |
+| GET         | /todos/:id     | Get a specific todo by ID          |
+| PATCH       | /todos/:id     | Update a specific todo by ID       |
+| DELETE      | /todos/:id     | Remove a specific todo by ID       |
+
+## Route Descriptions
+
+| HTTP Method | Route         | Description                                      |
+|-------------|---------------|--------------------------------------------------|
+| POST        | /todos         | Creates a new todo using the provided data       |
+| GET         | /todos         | Retrieves a list of all todos in the system      |
+| GET         | /todos/:id     | Fetches a specific todo by its ID                |
+| PATCH       | /todos/:id     | Updates a todo's details by its ID               |
+| DELETE      | /todos/:id     | Deletes a todo by its ID                         |
+
+## Swagger Documentation
+
+Swagger is enabled for this API to make testing and understanding routes easier.
+
+You can access the Swagger UI by navigating to: `http://localhost:3000/api`
+
+This will provide detailed information about the routes, including the expected request parameters, response formats, and the ability to try out the endpoints directly from the browser.
